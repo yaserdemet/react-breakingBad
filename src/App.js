@@ -1,10 +1,11 @@
 import './App.css';
-import AppRouter from './router/AppRouter';
+import Main from './components/Main';
+
 
 function App() {
   return (
     <div className="App">
-          <AppRouter />
+          <Main />
     </div>
   );
 }
