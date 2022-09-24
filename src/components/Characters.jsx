@@ -8,9 +8,11 @@ const Characters = ({isLoading , items, query}) => {
   return  isLoading ? <Loading /> : <section className='cards'>
 
 
-    {items?.
-    
-    map((item,index) => {
+    {items?.filter((item, index) =>{
+        return (
+            query.toLowerCase() === "" ?  item : item.name.toLowerCase().includes(query)
+        )
+    }).map((item,index) => {
         const {name, img, status , portrayed , char_id , occupation } = item
         const obj = {
             name , img , status , portrayed , char_id , occupation

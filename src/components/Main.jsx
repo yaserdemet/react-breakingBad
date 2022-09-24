@@ -9,7 +9,7 @@ const Main = () => {
   const [items, setItems] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [query, setQuery] = useState("");
-  const url =  `https://www.breakingbadapi.com/api/characters?name=${query}`
+  const url =  "https://www.breakingbadapi.com/api/characters"
   const getData = async () => {
     const res = await axios.get(url);
     // ? console.log(res.data);
@@ -23,7 +23,7 @@ const Main = () => {
     getData();
 
         },1000)
-}, [query]);
+}, []);
 
   return (
     <main className="container">
