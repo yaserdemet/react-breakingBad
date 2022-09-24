@@ -29,7 +29,7 @@ const Main = () => {
     <main className="container">
       <Header />
         <Search query={query} setQuery={setQuery}/>
-      <Characters isLoading={isLoading} items={items} />
+      <Characters isLoading={isLoading} items={items} query={query} />
     </main>
   );
 };

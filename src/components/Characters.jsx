@@ -2,12 +2,15 @@ import React from 'react'
 import Character from './Character'
 import Loading from './Loading'
 
-const Characters = ({isLoading , items}) => {
+const Characters = ({isLoading , items, query}) => {
     // console.log(isLoading, items)
+    console.log(query)
   return  isLoading ? <Loading /> : <section className='cards'>
 
 
-    {items?.map((item,index) => {
+    {items?.
+    
+    map((item,index) => {
         const {name, img, status , portrayed , char_id , occupation } = item
         const obj = {
             name , img , status , portrayed , char_id , occupation
