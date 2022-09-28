@@ -8,7 +8,10 @@ const Character = ({obj}) => {
     <div className='card'>
     <div className='card-inner'>
       <div className='card-front'>
-        <img src={img} alt='' />
+        {
+          char_id == 39 ? <img src={defaultPhoto} /> :
+          <img src={img} alt='' />
+        }
       </div>
       <div className='card-back'>
         <h1>{name}</h1>

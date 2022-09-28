@@ -2,13 +2,13 @@ import React from 'react'
 import Character from './Character'
 import Loading from './Loading'
 
-const Characters = ({isLoading , items, query}) => {
+const Characters = ({isLoading , currentPost, query}) => {
     // console.log(isLoading, items)
     console.log(query)
   return  isLoading ? <Loading /> : <section className='cards'>
 
 
-    {items?.filter((item, index) =>{
+    {currentPost?.filter((item, index) =>{
         return (
             query.toLowerCase() === "" ?  item : item.name.toLowerCase().includes(query)
         )
